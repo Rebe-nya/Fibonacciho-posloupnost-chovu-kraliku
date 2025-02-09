@@ -4,6 +4,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#months {
+    margin-bottom: 25px;
+}
+
 .rabbit {
     font-size: 1.5em; /* 24px (protože 16px * 1.5 = 24p; 16px je výchozí velikost textu) */
     margin-bottom: 1em;

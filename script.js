@@ -1,6 +1,7 @@
 // Funkce pro generování Fibonacciho posloupnosti
 function generateFibonacci(n) {
     const divFibonacci = document.getElementById("fibonacci");
+    divFibonacci.innerHTML = "";
     let a = 1, b = 1, temp;
     let i = 0;
     while (i <= n) {
@@ -8,13 +9,12 @@ function generateFibonacci(n) {
         let j = 0;
         let str = "";
         while (j<a){
-            str += "🐇";
+            str += "🐇🐇";
             j++;
         }
         divRabbit.classList.add("rabbit");
         divRabbit.innerHTML = str;
         divFibonacci.appendChild(divRabbit);
-        console.log(str);
         temp = a + b;
         a = b;
         b = temp;
@@ -23,5 +23,14 @@ function generateFibonacci(n) {
 }
 
 // Spuštění generování Fibonacciho posloupnosti s 6 prvky
-const n = 6;
-generateFibonacci(n);
+const n = document.getElementById("months");
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+    const months = parseInt(n.value);
+    if (!isNaN(months) && months > 0) {
+        generateFibonacci(months);
+    } else {
+        alert("Please enter a valid positive number of months.");
+    }
+});
