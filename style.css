@@ -9,7 +9,7 @@ body {
 }
 
 .rabbit {
-    font-size: 1.5em; /* 24px (protože 16px * 1.5 = 24p; 16px je výchozí velikost textu) */
+    font-size: 2em; /* 24px (protože 16px * 1.5 = 24p; 16px je výchozí velikost textu) */
     margin-top: 1em;
     margin-bottom: 1em;
 }

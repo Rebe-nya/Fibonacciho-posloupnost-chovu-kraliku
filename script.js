@@ -32,11 +32,32 @@ function generateFibonacci(n) {
     return num;
 }
 
-// Spuštění generování Fibonacciho posloupnosti s 6 prvky
+const months = document.getElementById("months");
+const btnMo = document.getElementById("btnMo");
 const divFibonacci = document.getElementById("fibonacci");
 const divText = document.getElementById("text");
 const n = document.getElementById("meters");
 const btn = document.getElementById("btn");
+
+// Btn pro měsíce
+
+btnMo.addEventListener("click", function() {
+    let n = parseInt(months.value);
+
+    meters = (meters / 12) - 1;
+    num = generateFibonacci(n);
+    console.log("Králíci =" + " " + num);
+    divText.innerHTML = "Počet králíků: " + num + "<br>";
+    num = num * 6;
+    console.log("Rozměr =" + " " + num);
+    divText.innerHTML += "Rozměr: " + num + " " + "<span>m<sup>2</sup></span>" + "<br>";
+    console.log("Měsíce =" + " " + n);
+    divText.innerHTML += "Počet měsíců: " + n;
+    generateFibonacci(n);
+});
+
+
+// Btn pro metry
 
 btn.addEventListener("click", function() {
     let meters = parseInt(n.value);
