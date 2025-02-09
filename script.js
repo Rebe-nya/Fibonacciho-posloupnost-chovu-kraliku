@@ -49,7 +49,7 @@ btn.addEventListener("click", function() {
         console.log("Králíci =" + " " + num);
         num = num * 6;
         console.log("Rozměr =" + " " + num);
-        console.log("Meters =" + " " + meters);
+        console.log("Měsíce =" + " " + meters);
         generateFibonacci(meters);
     }
     console.log("");
