@@ -34,6 +34,7 @@ function generateFibonacci(n) {
 
 // Spuštění generování Fibonacciho posloupnosti s 6 prvky
 const divFibonacci = document.getElementById("fibonacci");
+const divText = document.getElementById("text");
 const n = document.getElementById("meters");
 const btn = document.getElementById("btn");
 
@@ -47,9 +48,12 @@ btn.addEventListener("click", function() {
         meters = (meters / 12) - 1;
         num = generateFibonacci(meters);
         console.log("Králíci =" + " " + num);
+        divText.innerHTML = "Počet králíků: " + num + "<br>";
         num = num * 6;
         console.log("Rozměr =" + " " + num);
+        divText.innerHTML += "Rozměr: " + num + " " + "<span>m<sup>2</sup></span>" + "<br>";
         console.log("Měsíce =" + " " + meters);
+        divText.innerHTML += "Počet měsíců: " + meters;
         generateFibonacci(meters);
     }
     console.log("");
